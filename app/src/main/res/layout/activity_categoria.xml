@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Categoria">
 
 
@@ -15,7 +17,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sistema de Vendas"
+            android:text="Adicionar Categorias"
             android:textColor="@color/colorAccent"
             android:textSize="30sp" />
 
@@ -29,10 +31,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Usuário" />
+            android:text="Categorias:" />
 
         <EditText
-            android:id="@+id/user"
+            android:id="@+id/categoria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,15 +50,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Senha" />
+            android:text="Descrição:" />
 
         <EditText
-            android:id="@+id/pass"
+            android:id="@+id/categproadesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:password="true"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -72,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@color/colorAccent"
-            android:text="Login"
+            android:text="Cadastrar"
             android:textColor="#fff" />
 
         <Button
