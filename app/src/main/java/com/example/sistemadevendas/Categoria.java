@@ -3,6 +3,7 @@ package com.example.sistemadevendas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
@@ -25,12 +26,22 @@ public class Categoria extends AppCompatActivity {
         ed1 = findViewById(R.id.categoria);
         ed2 = findViewById(R.id.categproadesc);
         bt1 = findViewById(R.id.btn1);
-        bt2 = findViewById(R.id.btn2);
+
 
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 insert();
+            }
+        });
+
+
+        bt2 = findViewById(R.id.btn2);
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Categoria.this, Main.class);
+                startActivity(i);
             }
         });
     }
@@ -57,4 +68,10 @@ public class Categoria extends AppCompatActivity {
         }
 
     }
+
+
+
 }
+
+
+
