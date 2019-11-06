@@ -2,6 +2,7 @@ package com.example.sistemadevendas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,7 +50,8 @@ public class login extends AppCompatActivity {
         if (username.equals("") || password.equals("")) {
             Toast.makeText(this, "FAVOR DIGITAR AS INFORMAÇOES CORRETAS", Toast.LENGTH_SHORT).show();
         } else if (username.equals("san") && password.equals("123")) {
-            Toast.makeText(this, "SEJA BEM VINDO AO SISTEMA", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(login.this, Main.class);
+            startActivity(i);
         } else {
             Toast.makeText(this, "USUÁRIO OU SENHA NÃO CORRESPONDEM", Toast.LENGTH_SHORT).show();
         }
