@@ -52,6 +52,14 @@ public class CategoriaEditar extends AppCompatActivity {
                 Deletar();
             }
         });
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), Main.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void Editar() {
