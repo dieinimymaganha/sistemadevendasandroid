@@ -45,6 +45,13 @@ public class CategoriaEditar extends AppCompatActivity {
                 Editar();
             }
         });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Deletar();
+            }
+        });
     }
 
     public void Editar() {
@@ -67,6 +74,25 @@ public class CategoriaEditar extends AppCompatActivity {
 
         } catch (Exception ex) {
             Toast.makeText(this, "Categoria deu pau!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void Deletar() {
+        try {
+            String catid = ed1.getText().toString();
+            SQLiteDatabase db = openOrCreateDatabase("supervenda",
+                    Context.MODE_PRIVATE, null);
+            String sql = "DELETE FROM  categoria WHERE id = ?";
+            SQLiteStatement statement = db.compileStatement(sql);
+            statement.bindString(1, catid);
+            statement.execute();
+            Toast.makeText(this, "Categoria Deletada com sucesso", Toast.LENGTH_SHORT).show();
+
+            Intent i = new Intent(getApplicationContext(), Main.class);
+            startActivity(i);
+
+        } catch (Exception ex) {
+            Toast.makeText(this, "Deu pau!", Toast.LENGTH_SHORT).show();
         }
     }
 }
