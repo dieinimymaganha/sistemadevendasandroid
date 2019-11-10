@@ -17,6 +17,7 @@ public class Main extends AppCompatActivity {
 
         b1 = findViewById(R.id.btn1);
         b4 = findViewById(R.id.btn4);
+        b10 = findViewById(R.id.btn10);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,13 @@ public class Main extends AppCompatActivity {
                 // Redirecionando a pagina
                 Intent i = new Intent(Main.this, categoriaView.class);
                 startActivity(i);
+            }
+        });
+
+        b10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
