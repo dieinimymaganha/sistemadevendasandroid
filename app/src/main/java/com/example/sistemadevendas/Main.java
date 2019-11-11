@@ -16,6 +16,7 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         b1 = findViewById(R.id.btn1);
+        b2 = findViewById(R.id.btn2);
         b4 = findViewById(R.id.btn4);
         b10 = findViewById(R.id.btn10);
 
@@ -24,6 +25,15 @@ public class Main extends AppCompatActivity {
             public void onClick(View v) {
                 // Redirecionando a pagina
                 Intent i = new Intent(Main.this, Categoria.class);
+                startActivity(i);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirecionando a pagina
+                Intent i = new Intent(Main.this, Fabricante.class);
                 startActivity(i);
             }
         });
