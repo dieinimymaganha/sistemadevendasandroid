@@ -18,6 +18,7 @@ public class Main extends AppCompatActivity {
         b1 = findViewById(R.id.btn1);
         b2 = findViewById(R.id.btn2);
         b4 = findViewById(R.id.btn4);
+        b5 = findViewById(R.id.btn5);
         b10 = findViewById(R.id.btn10);
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,15 @@ public class Main extends AppCompatActivity {
             public void onClick(View v) {
                 // Redirecionando a pagina
                 Intent i = new Intent(Main.this, categoriaView.class);
+                startActivity(i);
+            }
+        });
+
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Redirecionando a pagina
+                Intent i = new Intent(Main.this, FabBrandView.class);
                 startActivity(i);
             }
         });
